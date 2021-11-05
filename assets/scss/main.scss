@@ -1,0 +1,508 @@
+// variabler
+
+$bgcolor: #f1f1f1;
+
+
+// Generel for alle sider
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: $bgcolor;
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 50vw;
+            height: 20vh;
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            #open {
+                text-decoration: underline;
+                border: none;
+                background-color: none;
+                font-size: large;
+                cursor: pointer;
+            }
+            #modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 30%;
+                top: 10%;
+                width: 40%;
+                height: 40%;
+                background-color: $bgcolor;
+                border: solid 5px #bbb;
+                border-radius: 10px;
+                justify-content: center;
+                align-items: center;
+
+                #modalcontent {
+                    justify-self: center;
+                    align-self: center;
+                    width: 100%;
+                    height: 100%;
+                    margin: 0;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: end;
+                    column-gap: 20px;
+
+                    section {
+                        li {
+                            list-style: none;
+                        }
+                    }
+                    .close {
+                        color: #777;
+                        font-size: 28px;
+                        font-weight: bold;
+                        justify-self: end;
+                        align-self: start;
+                    }
+                    .close:hover, .close:focus {
+                        color: black;
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+            img {
+                height: 10vh;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                input {
+                    width: 150px;
+                    height: 25px;
+                    margin: 2px;
+                    border: none;
+                    border-radius: 10px;
+                    text-align: center;
+                }
+                button {
+                    width: 150px;
+                    height: 20px;
+                    margin: 10px;
+                    background-color: #29703e;
+                    border: none;
+                    color: white;
+                    border-radius: 10px;
+                }
+                button:hover {
+                    background-color: #8eb75a;
+                    transition: .5s;
+                }
+            }
+        }
+        nav {
+            width: 100%;
+            margin-bottom: 20px;
+            ul {
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                li {
+                    display: inline;
+                    a {
+                        text-decoration: none;
+                        color: black;
+                    }
+                    a:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    #hero {
+        width: 100%;
+        position: relative;
+        img {
+            width: 100%;
+            height: 80vh;
+        }
+        .slides {
+            display: none;
+        }
+
+        form {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+            #search {
+                width: 800px;
+                height: 40px;
+                text-align: center;
+                border: none;
+                border-radius: 10px;
+            }
+            #searchbtn {
+                width: 200px;
+                height: 30px;
+                margin: 10px;
+                background-color: #29703e;
+                border: none;
+                color: white;
+                border-radius: 10px;
+
+            }
+            #searchbtn:hover {
+                background-color: #8eb75a;
+                transition: .5s;
+            }
+        }
+    }
+
+    footer {
+        background-color: $bgcolor;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        #medialinks {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+                        img {
+                width: 30%;
+            }
+        }
+    }
+
+    // Forside
+#frontmain {
+    #litfront {
+        width: 70vw;
+        text-align: center;
+        margin-bottom: 40px;
+        section {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            section {
+                position: relative;
+                justify-content: center;
+                align-items: center;
+                img {
+                    height: 50vh;
+                }
+                p {
+                    position: absolute;
+                    color: white;
+                    font-size: 2em;
+                }
+                p:hover {
+                    color: black;
+                    transition: .5s;
+                }
+            }
+        }
+    }
+}
+// Arrangementer
+#arrangmain {
+    #bigarrang {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $bgcolor;
+        h2 {
+            text-decoration: underline;
+        }
+        section {
+            width: 50%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 20px;
+            border: solid 5px #bbb;
+            border-radius: 10px;
+            background-color: white;
+            a {
+                color: black;
+            }
+        }
+        img {
+            width: 60%;
+        }
+    }
+
+    #smallarrang {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 20px;
+        section {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+                img {
+                    width: 50%;
+                }
+                    a {
+                        color: black;
+                    }
+        }
+    }
+}
+
+// Inspiration
+
+#inspomain {
+    #inspolist {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        figure {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 15%;
+            figcaption {
+                width: 80%;
+            }
+            img {
+                width: 80%;
+            }
+        }
+    }
+    #newsform {
+        width: 70%;
+        display: grid;
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 100px;
+        column-gap: 10px;
+        background-color: $bgcolor;
+        border: solid 5px #bbb;
+        border-radius: 10px;
+        align-items: center;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        padding-top: 20px;
+        input {
+            width: 400px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            margin: 10px;
+        }
+        label {
+            font-size: 2em;
+            justify-self: end;
+        }
+        #firstlabel {
+            grid-column-start: 1;
+            grid-row-start: 1;
+        }
+        #lastlabel {
+            grid-column-start: 1;
+            grid-row-start: 3;
+        }
+        #maillabel {
+            grid-column-start: 1;
+            grid-row-start: 5;
+        }
+        #phonelabel {
+            grid-column-start: 1;
+            grid-row-start: 7;
+        }
+        #firstname {
+            grid-column-start: 2;
+            grid-row-start: 1;
+        }
+        #lastname {
+            grid-column-start: 2;
+            grid-row-start: 3;
+        }
+        #email {
+            grid-column-start: 2;
+            grid-row-start: 5;
+        }
+        #phone {
+            grid-column-start: 2;
+            grid-row-start: 7;
+        }
+        #firstcheck {
+            grid-column-start: 2;
+            grid-row-start: 2;
+        }
+        #lastcheck {
+            grid-column-start: 2;
+            grid-row-start: 4;
+        }
+        #mailcheck {
+            grid-column-start: 2;
+            grid-row-start: 6;
+        }
+        #phonecheck {
+            grid-column-start: 2;
+            grid-row-start: 8;
+        }
+        button {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 9;
+            width: 300px;
+            height: 40px;
+            justify-self: center;
+            background-color: #29703e;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+        button:hover {
+            background-color: #8eb75a;
+            transition: .5s;
+        }
+    }
+}
+//Vi tilbyder
+#offersmain {
+    #offerswrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        figure {
+            width: 30%;
+            img {
+                width: 100%;
+            }
+            figcaption {
+                width:100%;
+                padding: 10px;
+            }
+        }
+    }
+}
+// Børn og forældre
+#kidsmain {
+    .kidsoffer {
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        img {
+            width: 50%;
+        }
+        p {
+            width: 40%;
+        }
+    }
+    footer {
+        margin-top: 20px;
+    }
+}
+#infomain {
+    #infowrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        margin-bottom: 50px;
+        h3 {
+            text-align: center;
+        }
+        section {
+            border: solid 5px #bbb;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: $bgcolor;
+            iframe {
+                height: 100px;
+                width: 300px;
+            }
+            ul {
+                list-style: none;
+                padding-left: 5px;
+                li {
+                    margin-bottom: 5px;
+                }
+            }    
+        }
+    }
+}
+
+// Media queries
+@media only screen and (max-width: 350px) {
+    main {
+        width: 100%;
+        header {
+            div {
+                img {
+                    width: 30%;
+                }
+                #open {
+                    width: 30%;
+                }
+                form {
+                    width: 30%;
+                    }
+                }
+            nav {
+                display: none;
+            }
+        }
+        #hero {
+            form {
+                input {
+                    width: 100%;
+                }
+            }
+
+        }
+        footer {
+            flex-direction: column;
+            #medialinks {
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+    }
+    #frontmain {
+        #litfront {
+            section {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
